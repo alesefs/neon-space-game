@@ -1,0 +1,44 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title> CampusGame </title>
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+		<style>
+			@font-face {
+				font-family: spacefont;
+				src: url(font/spacefont.ttf);
+			}
+			p.game{ font-family:spacefont, serif; text-align:center; font-size:0px; color:white}
+			html{overflow-y:hidden;overflow-x:hidden;}
+			body { margin: 0%; padding: 0%; background: #000005; } </style>
+		<!--<script src="js/phaser.min.js"></script>
+		<script src="js/phaser-state-transition.js"></script>-->
+		<script src="js/phaser.js"></script>
+		<script src="js/Boot.js"></script>
+		<script src="js/Preloader.js"></script>
+		<script src="js/Splash.js"></script>
+		<script src="js/MainMenu.js"></script>
+		<script src="js/Game.js"></script>
+	</head>
+
+	<body bgcolor="#06121e">
+		<script>
+			(function() {
+				var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'game');
+				game.state.add('Boot', Campus.Boot);
+				game.state.add('Preloader', Campus.Preloader);
+				game.state.add('Splash', Campus.Splash);
+				game.state.add('MainMenu', Campus.MainMenu);
+				game.state.add('Game', Campus.Game);
+
+				game.state.start('Boot');
+			})();
+		</script>
+
+		<!--<p class="game">AREFS productions</p>-->
+
+	</body>
+</html>
